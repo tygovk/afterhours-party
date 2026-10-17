@@ -1,0 +1,194 @@
+[
+  {
+    "id": "default-0",
+    "category": "warmup",
+    "type": "standard",
+    "text": "{speler1}, wat is het meest spontane dat je ooit hebt gedaan?",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-1",
+    "category": "warmup",
+    "type": "standard",
+    "text": "{speler1}, geef {speler2} een onverwacht compliment.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-2",
+    "category": "warmup",
+    "type": "timer",
+    "text": "{speler1}, noem 3 dingen die je meeneemt naar een onbewoond eiland.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-3",
+    "category": "warmup",
+    "type": "vote",
+    "text": "Wie zou het langst overleven zonder telefoon?",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-4",
+    "category": "warmup",
+    "type": "group",
+    "text": "Vertel om de beurt één goed ding over vandaag. Begin bij {speler1}.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-5",
+    "category": "warmup",
+    "type": "sidequest",
+    "text": "{speler1}, sluit elke zin af met “volgens de legende”.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-6",
+    "category": "warmup",
+    "type": "duel",
+    "text": "{speler1} tegen {speler2}: wie kan het langst niet lachen? De groep is jury.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-7",
+    "category": "silly",
+    "type": "standard",
+    "text": "{speler1}, verkoop je linkerschoen alsof het een luxeproduct is.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-8",
+    "category": "silly",
+    "type": "standard",
+    "text": "{speler1}, doe de overwinningsdans van {speler2} na.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-9",
+    "category": "silly",
+    "type": "timer",
+    "text": "{speler1}, noem 5 dieren met vier poten.",
+    "duration": 3,
+    "seconds": 5
+  },
+  {
+    "id": "default-10",
+    "category": "silly",
+    "type": "timer",
+    "text": "{speler1}, noem 3 merken bier.",
+    "duration": 3,
+    "seconds": 5
+  },
+  {
+    "id": "default-11",
+    "category": "silly",
+    "type": "vote",
+    "text": "Wie zou per ongeluk beroemd worden met een gênante video?",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-12",
+    "category": "silly",
+    "type": "group",
+    "text": "Iedereen doet een dierengeluid. Jullie mogen geen dier herhalen.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-13",
+    "category": "silly",
+    "type": "sidequest",
+    "text": "{speler1}, praat als een sportcommentator wanneer je aan de beurt bent.",
+    "duration": 4,
+    "seconds": 10
+  },
+  {
+    "id": "default-14",
+    "category": "silly",
+    "type": "duel",
+    "text": "{speler1} en {speler2}: bedenk om de beurt een slechte superkracht. Wie hapert, verliest.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-15",
+    "category": "caliente",
+    "type": "standard",
+    "text": "{speler1}, wat is jouw meest onhandige flirtmoment? Je mag passen.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-16",
+    "category": "caliente",
+    "type": "standard",
+    "text": "{speler1}, beschrijf je ideale date in precies vijf woorden.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-17",
+    "category": "caliente",
+    "type": "timer",
+    "text": "{speler1}, noem 3 romantische clichés.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-18",
+    "category": "caliente",
+    "type": "vote",
+    "text": "Wie zou het snelst een vakantieliefde krijgen?",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-19",
+    "category": "caliente",
+    "type": "group",
+    "text": "Iedereen noemt een onschuldige afknapper op een eerste date. Passen mag.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-20",
+    "category": "caliente",
+    "type": "sidequest",
+    "text": "{speler1}, spreek de groep aan alsof je een extravagante datingpresentator bent.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-21",
+    "category": "caliente",
+    "type": "duel",
+    "text": "{speler1} en {speler2}: bedenk allebei een cheesy openingszin. De groep kiest de grappigste.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-22",
+    "category": "custom",
+    "type": "standard",
+    "text": "{speler1}, vertel het verhaal achter jullie beste inside joke.",
+    "duration": 3,
+    "seconds": 10
+  },
+  {
+    "id": "default-23",
+    "category": "custom",
+    "type": "vote",
+    "text": "Wie zou de beste organisator van jullie volgende weekend weg zijn?",
+    "duration": 3,
+    "seconds": 10
+  }
+]
