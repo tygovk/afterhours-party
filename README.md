@@ -1,6 +1,6 @@
 # Afterhours
 
-Responsive Nederlandstalige partygame, gebouwd met HTML, CSS en Vanilla JavaScript. Geen build of dependencies nodig. Tailwind CDN is aanwezig; alle essentiële opmaak staat lokaal, zodat de app offline werkt.
+Responsive Nederlandstalige partygame, gebouwd met HTML, CSS en Vanilla JavaScript. Geen build of dependencies nodig. Alle opmaak staat lokaal, zodat de app offline werkt zonder CSS-framework of CDN.
 
 ## Starten
 
