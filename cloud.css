@@ -1,0 +1,18 @@
+#accountOpen{font-size:13px;font-weight:600;background:var(--lime);color:#24251f;padding:10px 12px}
+#accountDialog{width:min(850px,94vw)}
+#accountDialog form{margin:18px 0;padding:18px;background:var(--bg);border-radius:14px}
+#authForm label,#recoveryForm label{margin:14px 0;font-size:14px}
+#accountDialog .primary{margin:12px 0}
+.accountbar{display:flex;align-items:center;justify-content:space-between;gap:12px;overflow-wrap:anywhere}
+#cloudForm label{font-size:14px;margin-top:12px}
+#cloudForm input[type=file]{padding:12px;font-size:14px}
+.removeVideo{display:flex;gap:10px;align-items:center}
+.removeVideo input{width:24px;min-height:24px}
+#authStatus,#cloudStatus,#libraryStatus{white-space:pre-line;line-height:1.6}
+#cardMedia:empty{display:none}
+#cardMedia{margin:0 0 20px}
+#cardMedia video,#cardMedia iframe,#previewMedia video,#previewMedia iframe{display:block;width:100%;aspect-ratio:16/9;max-height:65dvh;object-fit:contain;border:0;border-radius:12px;background:#171a16}
+#cardMedia a{display:inline-flex;text-decoration:none;align-items:center}
+#previewMedia{min-height:100px}
+#cloudList .listcard button{min-width:44px;min-height:44px}
+@media(max-width:700px){#accountDialog{width:100%;max-width:100%}#accountDialog form{padding:14px}#authForm>button,#recoveryForm>button{width:100%;margin:6px 0}.accountbar{align-items:flex-start;flex-direction:column}.accountbar p{margin:0}#cloudForm .formgrid{grid-template-columns:1fr 1fr}#cloudForm .primary{width:100%}#cloudCancel{width:100%}#accountOpen{font-size:12px;min-width:76px}#previewMedia video,#previewMedia iframe{max-height:70svh}}

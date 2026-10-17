@@ -25,3 +25,11 @@ Categorieën: `warmup`, `silly`, `caliente`, `custom`. Types: `standard`, `sideq
 Upload deze map naar een GitHub-repository. Importeer de repository in Vercel als framework **Other**, zonder build command, met deze map als root. `vercel.json` configureert statische hosting. Pushes naar de productiebranch worden via de Vercel Git-integratie automatisch gepubliceerd.
 
 Installatie op iOS: Safari → Delen → Zet op beginscherm. Op ondersteunde browsers verschijnt een installatieknop. Voor brede ondersteuning zijn ook PNG-iconen van 192 en 512 pixels meegeleverd.
+
+## Account en privébibliotheek
+
+Klik op **Inloggen** om een account te maken, in te loggen of je wachtwoord te herstellen. Bevestig een nieuw account via e-mail. Omdat Afterhours en AI-database hetzelfde Supabase-project gebruiken, delen ze de accountregistratie; de eigen kaarten en video-opslag van Afterhours zijn gescheiden en afgeschermd per gebruiker.
+
+Onder **Mijn bibliotheek** kun je opdrachten toevoegen, bewerken en verwijderen. Koppel een HTTPS-videolink of upload een MP4/WebM/MOV-bestand (maximaal 50 MB). YouTube en Vimeo worden ingebed; andere videolinks openen extern. Browserondersteuning verschilt per videoformaat; MP4 is de aanbevolen keuze. Uploads staan in de private bucket `afterhours-videos`, met toegangsbeleid op basis van de gebruikers-ID. Er zijn geen beheersleutels opgenomen in de client.
+
+Eigen bibliotheekkaarten doen mee via hun gekozen categorie, standaard **Eigen vragen**. Accountgegevens en video's laden vereist internet. Cloudkaarten worden niet naar de offline kaartenset gekopieerd; uitloggen verwijdert de geladen bibliotheek uit het geheugen. Lokale kaarten blijven apart op dit apparaat. De SDK is gepind op `@supabase/supabase-js@2.57.4` en laadt alleen bij gebruik van de accountfunctie.
