@@ -12,7 +12,7 @@ $('cloudCategory').innerHTML=$('editCategory').innerHTML;$('cloudType').innerHTM
 async function getCloud(){
  if(cloudClient)return cloudClient;
  if(!navigator.onLine)throw Error('Je bent offline. Inloggen en je bibliotheek laden kan zodra je weer internet hebt.');
- if(!cloudLoading)cloudLoading=new Promise((resolve,reject)=>{const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.4/dist/umd/supabase.js';s.onload=resolve;s.onerror=()=>reject(Error('Inloggen kon niet laden. Controleer je internetverbinding en probeer opnieuw.'));document.head.append(s);}).then(()=>{
+ if(!cloudLoading)cloudLoading=new Promise((resolve,reject)=>{const s=document.createElement('script');s.src='supabase-2.57.4.js';s.onload=resolve;s.onerror=()=>reject(Error('Inloggen kon niet laden. Controleer je internetverbinding en probeer opnieuw.'));document.head.append(s);}).then(()=>{
   cloudClient=window.supabase.createClient(CLOUD_URL,CLOUD_KEY,{auth:{storageKey:'afterhours-auth',persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
   cloudClient.auth.onAuthStateChange((event,s)=>{setTimeout(()=>applyIdentity(s?.user||null,event),0);});return cloudClient;
  }).catch(e=>{cloudLoading=null;throw e;});
