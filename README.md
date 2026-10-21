@@ -1,35 +1,33 @@
-# Afterhours
+# Afterhours — persoonlijke partygame
 
-Responsive Nederlandstalige partygame, gebouwd met HTML, CSS en Vanilla JavaScript. Geen build of dependencies nodig. Alle opmaak staat lokaal, zodat de app offline werkt zonder CSS-framework of CDN.
+Responsive HTML/CSS/Vanilla JavaScript-app, zonder buildstap. Installeerbaar op het beginscherm via Safari (Delen → Zet op beginscherm) of Chrome (App installeren).
 
-## Starten
+## Verplicht account en eigen inrichting
 
-Open index.html voor direct lokaal spelen. Voor installatie en offline caching: serveer deze map via localhost of HTTPS, bijvoorbeeld met `npx serve .`. Open daarna de getoonde URL. De service worker slaat de app na de eerste online laadbeurt op. Externe fonts zijn optioneel; offline worden systeemfonts gebruikt.
+Een account is verplicht om te spelen. De app controleert Supabase Auth via getUser(), laadt het eigen profiel en opent daarna de lobby. Registratie vereist e-mailbevestiging. Na uitloggen verdwijnen de vorige bibliotheek en het profiel uit het geheugen.
 
-## Spelen
+Afterhours deelt Supabase-project lxqzkrdotiorqskfjrhs met AI-database. De accountregistratie is gedeeld; de eigen tabellen en private videomap zijn afgeschermd per gebruiker.
 
-Voeg 2–20 unieke spelers toe, selecteer categorieën en start. Iedere getrokken kaart is één ronde. Persoonlijke rollen worden willekeurig toegewezen aan de minst gekozen beschikbare spelers. De twee rollen op een kaart zijn altijd verschillend. Groepskaarten zonder rollen tellen niet als persoonlijke beurt. Kaarten worden zonder herhaling getrokken totdat de gekozen set op is.
+Via Mijn bibliotheek → Mijn huisregels, Instellingen → Mijn huisregels en profiel, of Aanpassen in de lobby kun je maximaal 100 huisregels van 400 tekens beheren. Geef je avond een eigen naam. Schakel individuele regels in of uit en bekijk de actieve regels tijdens het spel via Onze huisregels. De groep past de regels zelf toe.
 
-Sidequests vervallen na het opgegeven aantal volgende kaarten. De timer start handmatig en kan worden gepauzeerd. Stemmen gebeurt door de telefoon door te geven: iedere speler brengt één stem uit. Dit is een lokaal spel op één apparaat, geen online multiplayer. De groep beoordeelt de uitvoering van opdrachten en duels.
+Huisregels, de naam van de avond, spelers, categorieën, donkere modus, geluid en de aangepaste kaartenset synchroniseren automatisch met afterhours_profiles. De opslagstatus geeft aan of opslaan gelukt is. Op verschillende apparaten geldt de laatst opgeslagen versie. Nog niet gesynchroniseerde wijzigingen blijven als gebruikersgebonden concept op het apparaat staan. Via Bestaande lokale kaarten meenemen kun je eerdere lokale kaarten expliciet aan je profiel toevoegen.
 
-De kaartenstudio werkt ook tijdens het spel. Import voegt kaarten toe aan de bestaande set en valideert de volledige invoer voordat iets verandert. Export bevat de volledige huidige set. LocalStorage bewaart spelers, kaarten, categorieën en instellingen. De lopende ronde, stemmen, timers en sidequests worden bij herladen gereset.
+## Opdrachten en video's
 
-## Kaartformaat
+Maak in Mijn bibliotheek opdrachtkaarten met categorie en type. Koppel een HTTPS-videolink of een MP4/WebM/MOV-upload van maximaal 50 MB. YouTube en Vimeo spelen in de app; andere HTTPS-links openen extern. De afspeelbaarheid van videobestanden hangt af van de browser; MP4 wordt aanbevolen. Uploads staan in de private bucket afterhours-videos met toegang op basis van gebruikers-ID. Alleen een publishable key is opgenomen in de client.
 
-Een JSON-array met objecten: `{"text":"{speler1}, geef {speler2} een compliment.","category":"custom","type":"standard","duration":3,"seconds":10}`.
+## Spel
 
-Categorieën: `warmup`, `silly`, `caliente`, `custom`. Types: `standard`, `sidequest`, `timer`, `vote`, `group`, `duel`. Duur: 1–20 rondes; timer: 3–120 seconden. Tekst: maximaal 600 tekens. De 24 voorbeeldkaarten staan in `cards.js` en als losse dataset in `example-cards.json`.
+2–20 unieke spelers. De minst gekozen beschikbare spelers krijgen voorrang bij rolverdeling; twee rollen op één kaart zijn altijd verschillend. Kaarten herhalen pas als de set op is. Sidequests verlopen na het ingestelde aantal volgende kaarten. Timers starten handmatig. Stemmen gebeurt door de telefoon door te geven.
 
-## Publicatie
+24 voorbeeldkaarten staan in cards.js en example-cards.json. Categorieën: warmup, silly, caliente, custom. Types: standard, sidequest, timer, vote, group, duel. JSON-import voegt gevalideerde kaarten toe.
 
-Upload deze map naar een GitHub-repository. Importeer de repository in Vercel als framework **Other**, zonder build command, met deze map als root. `vercel.json` configureert statische hosting. Pushes naar de productiebranch worden via de Vercel Git-integratie automatisch gepubliceerd.
+## Offline gebruik
 
-Installatie op iOS: Safari → Delen → Zet op beginscherm. Op ondersteunde browsers verschijnt een installatieknop. Voor brede ondersteuning zijn ook PNG-iconen van 192 en 512 pixels meegeleverd.
+Bij het openen is internet nodig om het account te controleren en het profiel te laden. Een al gestart spel met lokale kaarten kan bij netwerkverlies doorgaan. Inloggen, synchroniseren, de cloudbibliotheek en video's vereisen internet. Ronde, stemmen en timers resetten bij herladen.
 
-## Account en privébibliotheek
+## Starten en deployen
 
-Klik op **Inloggen** om een account te maken, in te loggen of je wachtwoord te herstellen. Bevestig een nieuw account via e-mail. Omdat Afterhours en AI-database hetzelfde Supabase-project gebruiken, delen ze de accountregistratie; de eigen kaarten en video-opslag van Afterhours zijn gescheiden en afgeschermd per gebruiker.
+Serveer deze map via localhost of HTTPS, bijvoorbeeld npx serve . Importeer de GitHub-repository in Vercel als Other, zonder buildcommando en met rootdirectory ./.
 
-Onder **Mijn bibliotheek** kun je opdrachten toevoegen, bewerken en verwijderen. Koppel een HTTPS-videolink of upload een MP4/WebM/MOV-bestand (maximaal 50 MB). YouTube en Vimeo worden ingebed; andere videolinks openen extern. Browserondersteuning verschilt per videoformaat; MP4 is de aanbevolen keuze. Uploads staan in de private bucket `afterhours-videos`, met toegangsbeleid op basis van de gebruikers-ID. Er zijn geen beheersleutels opgenomen in de client.
-
-Eigen bibliotheekkaarten doen mee via hun gekozen categorie, standaard **Eigen vragen**. Accountgegevens en video's laden vereist internet. Cloudkaarten worden niet naar de offline kaartenset gekopieerd; uitloggen verwijdert de geladen bibliotheek uit het geheugen. Lokale kaarten blijven apart op dit apparaat. De SDK is gepind op `@supabase/supabase-js@2.57.4` en laadt alleen bij gebruik van de accountfunctie.
+Productie: https://afterhours-party-five.vercel.app/
