@@ -6,8 +6,8 @@
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f7f7f0",
-  "theme_color": "#dfff70",
+  "background_color": "#05253d",
+  "theme_color": "#05253d",
   "icons": [
     {
       "src": "pils-icon-192.png",
