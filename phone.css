@@ -1,0 +1,68 @@
+/* A phone app shell with thumb-accessible navigation. */
+#phoneNav{display:none}.install-banner{display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;margin:0 0 22px}.install-banner strong{display:block;font:600 16px 'Space Grotesk',sans-serif}.install-banner p{margin:5px 0 0;color:var(--muted);font-size:13px;line-height:1.5}.install-banner button{flex-shrink:0;background:var(--lime);color:#25281f;font-weight:600}#phoneSettings .setting-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);font-size:16px}#phoneSettings .setting-row button{min-width:90px}#phoneSettings>p,#installHelp p,#installHelp li{line-height:1.7;font-size:16px}#installHelp ol{padding-left:24px}#installHelp li{padding:8px 0}#installHelp img{width:64px;height:64px;border-radius:16px;margin-bottom:12px}#installNative{width:100%;margin-bottom:16px}.app-status{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)}.app-status::before{content:'';height:6px;width:6px;border-radius:50%;background:#7f9840}.app-status.offline::before{background:#d89042}.install-banner[hidden]{display:none}
+@media(max-width:700px){
+ html{scroll-padding-top:80px;scroll-padding-bottom:100px}
+ body{min-height:100svh;padding-bottom:calc(78px + env(safe-area-inset-bottom));overscroll-behavior-y:none}
+ body>header{position:sticky;top:0;z-index:5;min-height:64px;flex-wrap:nowrap;padding:calc(8px + env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) 8px max(16px,env(safe-area-inset-left));background:var(--bg)}
+ body>header .brand{font-size:24px}
+ body>header>nav{display:none}
+ #headerStatus{display:inline-flex;margin-left:auto}
+ main{max-width:520px;width:100%;padding-top:18px;margin:auto}
+ .intro{margin-bottom:22px}
+ .intro .eyebrow{font-size:9px}
+ .intro h1{font-size:clamp(36px,10vw,50px);margin:15px 0;line-height:1.08}
+ .intro p{font-size:14px;line-height:1.6;margin:10px 0}
+ .intro .tags{margin-top:14px;font-size:11px;gap:8px 14px}
+ .spark{font-size:55px;top:35px}
+ .setupgrid{gap:14px}
+ .panel{padding:16px}
+ .categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .category{position:relative;display:block;min-width:0;min-height:106px;padding:13px 10px}
+ .category .symbol{display:block;font-size:24px;margin-bottom:6px}
+ .category .check{position:absolute;right:10px;top:12px}
+ .category strong{font-size:14px}
+ .category small{font-size:11px}
+ .launch{margin-top:14px;padding:18px;gap:14px}
+ .launch strong{font-size:17px}
+ .launch p{font-size:13px}
+ .bottomnote{font-size:12px;line-height:1.6}
+ .install-banner{padding:14px;margin-bottom:18px;align-items:flex-start}
+ .install-banner strong{font-size:15px}
+ .install-banner p{font-size:12px}
+ .install-banner button{padding:10px 12px;font-size:13px}
+ #phoneNav{position:fixed;z-index:8;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:8px max(16px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));background:var(--panel);border-top:1px solid var(--line)}
+ #phoneNav button{border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:54px;padding:6px;font-size:11px;color:var(--muted);font-weight:600}
+ #phoneNav button .nav-icon{font-size:23px;line-height:1}
+ #phoneNav button[aria-current=page]{background:var(--lime);color:#25281f;border-radius:14px}
+ body>footer{display:none}
+ body.playing{padding-bottom:0}
+ body.playing>header{display:none}
+ body.playing #phoneNav{display:none}
+ body.playing main{max-width:560px;padding-top:calc(12px + env(safe-area-inset-top));padding-bottom:calc(125px + env(safe-area-inset-bottom))}
+ .gamebar{flex-wrap:nowrap;margin-bottom:12px;gap:8px}
+ .gamebar #round{order:0;flex:1;width:auto;text-align:center;font-size:11px;white-space:nowrap}
+ .gamebar button{min-height:46px;padding:10px;font-size:12px}
+ #gameEditor{font-size:0;min-width:46px}
+ #gameEditor::after{content:'▦';font-size:22px}
+ #quests:empty{display:none}
+ #quests{max-height:150px;margin-bottom:10px}
+ .quest{flex-basis:85%;overflow-y:auto;max-height:140px;font-size:13px}
+ #card{min-height:calc(100svh - 205px - env(safe-area-inset-top) - env(safe-area-inset-bottom));padding:22px 20px;border-radius:24px}
+ #card h1{font-size:clamp(28px,7.5vw,40px);line-height:1.2;letter-spacing:-.7px}
+ .cardicon{margin-top:20px;font-size:44px}
+ .gamefooter{position:fixed;bottom:0;left:0;right:0;z-index:7;margin:0;padding:12px max(16px,env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));gap:7px;background:var(--bg);box-shadow:0 -8px 24px #00000008}
+ .gamefooter button{width:100%;max-width:528px;align-self:center;min-height:58px;font-size:18px}
+ .gamefooter p{font-size:11px}
+ #game>details{margin-bottom:10px}
+ dialog,#accountDialog{position:fixed;inset:0;width:100%;max-width:100%;height:100dvh;max-height:100dvh;margin:0;border:0;border-radius:0;padding:calc(20px + env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
+ dialog>.sectionhead{top:calc(-20px - env(safe-area-inset-top));padding-top:calc(12px + env(safe-area-inset-top));padding-bottom:12px;min-height:68px}
+ dialog>.sectionhead h2{font-size:21px}
+ dialog>.sectionhead button{min-height:48px;min-width:48px}
+ #accountDialog .accountbar{flex-direction:row;align-items:center}
+ #accountEmail{font-size:14px;overflow-wrap:anywhere}
+ #cloudForm .formgrid{grid-template-columns:1fr}
+ #toast{bottom:calc(100px + env(safe-area-inset-bottom));z-index:30}
+ body.playing #toast{bottom:calc(125px + env(safe-area-inset-bottom))}
+ body.keyboard-open #phoneNav{display:none}
+}
+@media(max-height:500px) and (orientation:landscape){#card{min-height:240px}.cardicon{display:none}#card h1{font-size:28px}.gamefooter p{display:none}}
