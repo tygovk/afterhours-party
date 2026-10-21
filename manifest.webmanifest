@@ -1,7 +1,7 @@
 {
-  "name": "Afterhours — Partygame",
-  "short_name": "Afterhours",
-  "description": "Jullie vrienden, jullie regels. Offline partygame.",
+  "name": "PILS",
+  "short_name": "PILS",
+  "description": "smoel dicht en trek een bak!",
   "lang": "nl",
   "start_url": "./",
   "scope": "./",
@@ -10,16 +10,16 @@
   "theme_color": "#dfff70",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "pils-icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "icon-512.png",
+      "src": "pils-icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ],
   "id": "/",
