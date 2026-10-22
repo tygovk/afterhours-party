@@ -1,4 +1,4 @@
-const CACHE='afterhours-v14';
+const CACHE='afterhours-v15';
 const ASSETS=['./','./index.html','./style.css','./mobile.css','./phone.css','./phone.js','./profile.js','./admin.js','./admin-deck.js','./wizard.js','./wizard.css','./brand.css','./pils-logo.png','./pils-android-192.png','./pils-android-512.png','./pils-icon-192.png','./pils-icon-512.png','./admin.css','./profile.css','./cards.js','./app.js','./cloud.js','./supabase-2.57.4.js','./cloud.css','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('afterhours-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
